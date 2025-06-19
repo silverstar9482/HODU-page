@@ -56,7 +56,7 @@
 
 ### 📱 Mobile
 
-<img src="./images/hodupage-m.png" alt="모바일 화면 스크린샷" width="300">
+<img src="./images/mobile-page.png" alt="모바일 화면 스크린샷" width="300">
 
 ## 🔎 프로젝트 추후 진행 계획
 
