@@ -64,7 +64,7 @@
                 </p>
             </article>
 
-            <article class="cat-contents">
+            <article class="cat-contents clearfix">
                 <h3>dummy text of the printing and dummy</h3>
                 <p>
                     Lorem Ipsum is simply <strong>dummy text</strong> of the
@@ -91,7 +91,7 @@
             </article>
 
             <article class="cat-subscribe">
-                <form action="#" method="post">
+                <form action="#" method="post" class="clearfix">
                     <fieldset><span>Subscribe to our</span> Blog post</fieldset>
 
                     <label for="user-email">
@@ -107,20 +107,23 @@
                     />
 
                     <button type="submit" class="btn">Subscribe</button>
-                </form>
 
-                <dialog class="subscribe-modal">
-                    <h4>Thank you!</h4>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing
-                        industry.
-                    </p>
-                    <button type="button" class="btn">OK! I Love HODU</button>
-                </dialog>
+                    <div class="subscribe-modal">
+                        <h4>Thank you!</h4>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing
+                            industry.
+                        </p>
+                        <button type="button" class="btn modal-btn">
+                            OK! I Love HODU
+                        </button>
+                    </div>
+                </form>
             </article>
+            <div class="bottom-img"></div>
         </section>
         <footer>
-            <ul>
+            <ul class="footer-tit">
                 <li class="footer-logo">
                     <a href="index.html">
                         <img src="./images/Logo-fin.svg" alt="HODU" />

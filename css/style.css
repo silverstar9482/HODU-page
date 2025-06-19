@@ -14,7 +14,7 @@ a,
 input,
 button {
     font-family: "Spoqa Han Sans Neo", "sans-serif";
-    font-family: 400;
+    font-weight: 400;
 }
 
 /* 공동 속성 */
@@ -25,6 +25,7 @@ strong {
 
 .btn {
     color: #fff;
+    font-size: 1.4rem;
     padding: 1.1rem 2.4rem;
     background-color: var(--main-color);
     border-radius: 4rem;
@@ -203,6 +204,10 @@ header h1 img {
 /* --------------------------------------- */
 
 /* section */
+section {
+    padding-bottom: 17.2rem;
+    position: relative;
+}
 
 /* cat-info */
 .cat-info {
@@ -285,4 +290,147 @@ header h1 img {
 .cat-contents a.btn {
     display: inline-block;
     float: right;
+}
+
+/* cat-subscribe */
+.cat-subscribe form {
+    width: calc(100% - (3.2rem * 2));
+    background-color: var(--sub-color);
+    padding: 3.6rem 3.2rem 3rem;
+    border-radius: 1.8rem;
+    margin: 0 auto;
+    position: relative;
+
+    z-index: 3;
+}
+
+.cat-subscribe fieldset {
+    font-family: "Spoqa Han Sans Neo", "sans-serif";
+    font-size: 2.4rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    line-height: 130%;
+    font-weight: 700;
+}
+.cat-subscribe fieldset span {
+    display: block;
+}
+
+.cat-subscribe form label {
+    color: rgba(242, 233, 216, 1);
+    font-size: 1.4rem;
+    line-height: 130%;
+    font-weight: 100;
+}
+
+.cat-subscribe form input {
+    width: 100%;
+    display: block;
+    margin: 3rem 0 2rem;
+    border-radius: 4rem;
+    padding: 1.2rem 1.6rem;
+    font-size: 1.2rem;
+    color: rgba(118, 118, 118, 1);
+    border: 0;
+}
+
+.cat-subscribe form > button {
+    float: right;
+}
+
+/* modal창 */
+.subscribe-modal {
+    width: 30rem;
+    height: 30rem;
+    padding: 12.6rem 0 3rem;
+    border-radius: 3rem;
+    text-align: center;
+    background: url("./../images/m-bg.png") no-repeat top center / contain;
+    background-color: rgba(242, 233, 216, 1);
+    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: none;
+}
+
+.subscribe-modal::after {
+    content: "";
+    width: 6rem;
+    height: 6.2rem;
+    background: url("./../images/m-cat.png") no-repeat center / cover;
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.subscribe-modal h4 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.subscribe-modal p {
+    font-size: 1.4rem;
+    line-height: 130%;
+    margin: 1rem 3.5rem 2.8rem;
+}
+
+.subscribe-modal .modal-btn {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.bottom-img {
+    width: 100%;
+    height: 24rem;
+    background: url("./../images/img_5.png") no-repeat center bottom / 100% auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3rem 2rem 2.4rem;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-tit .footer-logo a {
+    max-width: 11.2rem;
+}
+.footer-tit .footer-logo a img {
+    width: 100%;
+}
+.footer-tit .sns {
+    display: flex;
+    flex-direction: row;
+    gap: 1.6rem;
+}
+
+.footer-tit .sns a {
+    width: 3.2rem;
+}
+.footer-tit .sns a img {
+    width: 100%;
+}
+
+.footer-menu {
+    text-align: right;
+    display: flex;
+    gap: 1.6rem;
+    font-size: 1.4rem;
+    color: rgba(118, 118, 118, 1);
 }
