@@ -60,7 +60,6 @@
 
 ## 🔎 프로젝트 추후 진행 계획
 
--   희망 직업과 훈련시간 입력 시 JavaScript로 결과 창에 값이 나올 수 있게 구현
 -   JavaScript로 button 클릭 시 Modal창 노출 구현
 
 ## 🙋‍♂️ Developer
