@@ -1,0 +1,288 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+:root {
+    --main-color: rgba(217, 118, 82, 1);
+    --sub-color: rgba(38, 49, 64, 1);
+    --bg-color: rgba(242, 233, 216, 1);
+}
+html {
+    font-size: 10px;
+}
+
+body,
+a,
+input,
+button {
+    font-family: "Spoqa Han Sans Neo", "sans-serif";
+    font-family: 400;
+}
+
+/* 공동 속성 */
+strong {
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.btn {
+    color: #fff;
+    padding: 1.1rem 2.4rem;
+    background-color: var(--main-color);
+    border-radius: 4rem;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/* --------------------------------------- */
+
+/* head */
+
+header {
+    width: 100%;
+    height: 100%;
+    padding: 2rem 2.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    color: #fff;
+    background-color: var(--bg-color);
+}
+
+header h1 a {
+    width: 9.2rem;
+}
+header h1 img {
+    width: 100%;
+}
+
+/* 햄버거 버튼 모양 */
+.hamburger-btn {
+    width: 3.2rem;
+    height: 3.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger-btn span {
+    display: block;
+    width: 2.4rem;
+    height: 0.2rem;
+    background-color: var(--sub-color);
+    position: relative;
+}
+.hamburger-btn span::before {
+    content: "";
+    background-color: var(--sub-color);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -0.8rem;
+    left: 0;
+}
+.hamburger-btn span::after {
+    content: "";
+    background-color: var(--sub-color);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -0.8rem;
+    left: 0;
+}
+
+/* 햄버거 버튼 눌렀을 때 화살표모양 */
+.arrow-btn {
+    width: 3.2rem;
+    height: 3.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 2.2rem;
+    right: calc(70% - 2rem);
+    transform: translateX(3.2rem);
+    z-index: 2;
+
+    display: none;
+}
+
+.arrow-btn span {
+    display: block;
+    width: 1.6rem;
+    height: 0.1rem;
+    border: 0.1rem solid #fff;
+    background-color: #fff;
+    position: relative;
+}
+
+.arrow-btn span::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: 0;
+    transform: translateY(-50%) rotate(45deg);
+    width: 1rem;
+    height: 1rem;
+    border: 0.2rem solid #fff;
+    border-bottom: transparent;
+    border-left: transparent;
+}
+
+/* 네비게이션 바 */
+
+.global-menu {
+    width: 70%;
+    height: 100vh;
+    background-color: var(--sub-color);
+    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-left: 5rem;
+    z-index: 1;
+
+    display: none;
+}
+
+.global-menu ul {
+    margin-top: 12rem;
+    font-size: 1.6rem;
+}
+
+.global-menu ul li:not(:last-child) {
+    margin-bottom: 3rem;
+}
+
+.global-menu .download-btn {
+    margin-top: 5rem;
+    margin-left: -1rem;
+}
+
+/* --------------------------------------- */
+
+/* main */
+.page-info {
+    width: 100%;
+    text-align: center;
+    padding: 4rem 0 39rem;
+    background-color: var(--bg-color);
+    position: relative;
+}
+
+.page-info::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url("./../images/고양이\ 1.png") no-repeat bottom center / auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.page-info h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 130%;
+}
+.page-info h2 span {
+    display: block;
+}
+
+.page-info p {
+    width: calc(100% - (5.5rem * 2));
+    font-size: 1.4rem;
+    line-height: 130%;
+    margin: 3rem auto;
+}
+
+/* --------------------------------------- */
+
+/* section */
+
+/* cat-info */
+.cat-info {
+    padding: 4rem 3rem 6rem;
+}
+.cat-info img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 1.8rem;
+    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
+}
+
+.cat-info h2 {
+    margin-top: 4rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: -0.04rem;
+}
+
+.cat-info h2 span {
+    display: block;
+}
+
+.cat-info p {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    line-height: 130%;
+}
+
+/* cat-contents */
+.cat-contents {
+    padding: 0 3rem 5rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.cat-contents h3 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 130%;
+    color: var(--main-color);
+}
+
+.cat-contents p {
+    font-size: 1.6rem;
+    line-height: 130%;
+}
+.cat-contents p:nth-child(2) {
+    margin-top: 3rem;
+}
+
+.cat-contents p span {
+    display: block;
+}
+
+.cat-img-box {
+    margin: 4rem 0 6rem;
+    /* width: calc((26rem * 3)+ (2rem * 2)); */
+    width: 82rem;
+    height: 26rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+}
+
+.cat-img-box img {
+    width: 26rem;
+    border-radius: 1.8rem;
+    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
+}
+
+.cat-contents p:nth-child(4) {
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
+.cat-contents a.btn {
+    display: inline-block;
+    float: right;
+}
