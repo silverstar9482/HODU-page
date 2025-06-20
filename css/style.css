@@ -23,6 +23,10 @@ strong {
     color: var(--main-color);
 }
 
+.line-break {
+    display: block;
+}
+
 .btn {
     color: #fff;
     font-size: 1.4rem;
@@ -33,6 +37,9 @@ strong {
 
 .clearfix::after {
     content: "";
+    width: 0;
+    height: 0;
+    font-size: 0;
     clear: both;
     display: block;
 }
@@ -195,9 +202,6 @@ main {
     font-weight: 700;
     line-height: 130%;
 }
-.page-info h2 span {
-    display: block;
-}
 
 .page-info p {
     width: calc(100% - (5.5rem * 2));
@@ -234,10 +238,6 @@ section {
     letter-spacing: -0.04rem;
 }
 
-.cat-info h3 span {
-    display: block;
-}
-
 .cat-info p {
     margin-top: 2rem;
     font-size: 1.4rem;
@@ -258,9 +258,6 @@ section {
     color: var(--main-color);
     letter-spacing: -0.03rem;
 }
-.cat-contents h3 span {
-    display: block;
-}
 
 .cat-contents p {
     font-size: 1.6rem;
@@ -269,10 +266,6 @@ section {
 }
 .cat-contents p:nth-child(2) {
     margin-top: 3rem;
-}
-
-.cat-contents p span {
-    display: block;
 }
 
 .cat-img-box {
@@ -329,9 +322,6 @@ section {
     line-height: 130%;
     font-weight: 700;
 }
-.cat-subscribe fieldset span {
-    display: block;
-}
 
 .cat-subscribe form label {
     color: rgba(242, 233, 216, 1);
@@ -339,13 +329,26 @@ section {
     line-height: 130%;
     font-weight: 100;
 }
+.email-send .email-input-wrapper {
+    width: 100%;
+    position: relative;
+}
 
+.email-send .email-input-wrapper::after {
+    content: "";
+    width: 1.8rem;
+    height: 100%;
+    background: url("./../images/mail.png") no-repeat center center / 100% auto;
+    position: absolute;
+    top: 0;
+    left: 1.6rem;
+}
 .cat-subscribe form input {
     width: 100%;
     display: block;
     margin: 3rem 0 2rem;
     border-radius: 4rem;
-    padding: 1.2rem 1.6rem;
+    padding: 1.2rem 1.6rem 1.2rem 4.8rem;
     font-size: 1.2rem;
     color: rgba(118, 118, 118, 1);
     border: 0;
@@ -409,6 +412,12 @@ section {
     bottom: 0;
     left: 0;
 }
+/* ------------------------------------------ */
+/* aside */
+section aside {
+    display: none;
+}
+/* ------------------------------------------ */
 
 /* footer */
 footer {
@@ -454,7 +463,7 @@ ul {
     color: rgba(118, 118, 118, 1);
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1080px) {
     /* 공동속성 */
     .btn {
         font-size: 1.6rem;
@@ -538,9 +547,7 @@ ul {
         width: 60%;
         font-size: 4.8rem;
     }
-    .page-info h2 span {
-        display: inline-block;
-    }
+
     .page-info p {
         width: 30%;
         margin-left: 0;
@@ -602,11 +609,7 @@ ul {
         display: inline-block;
     }
     .cat-contents p:nth-child(2) {
-        width: 100%;
         margin: 0 auto;
-    }
-    .cat-contents p:nth-child(2) span {
-        display: block;
     }
 
     .cat-img-box {
@@ -640,6 +643,11 @@ ul {
         border-radius: 3rem;
         gap: 10%;
     }
+
+    .cat-subscribe fieldset {
+        font-size: 3.6rem;
+    }
+
     .cat-subscribe fieldset span {
         display: inline-block;
     }
@@ -652,19 +660,37 @@ ul {
         width: 100%;
         height: 6rem;
         position: relative;
-        border: 1px solid red;
     }
-    .email-send input {
+
+    .email-send .email-input-wrapper {
+        width: 100%;
+        height: 6rem;
+    }
+
+    .email-send .email-input-wrapper::after {
+        width: 2.4rem;
+        left: 2.8rem;
+    }
+
+    .cat-subscribe form .email-send input {
         width: 100%;
         height: 100%;
+        margin: 0;
+        font-size: 1.6rem;
+        vertical-align: middle;
+        padding: 0 2.8rem 0 6.8rem;
         position: absolute;
         top: 0;
         left: 0;
     }
-    .email-send button {
+    .cat-subscribe form .email-send button {
+        height: 5rem;
+        font-size: 1.6rem;
+        vertical-align: middle;
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 50%;
+        right: 0.5rem;
+        transform: translateY(-50%);
     }
 
     .bottom-img {
@@ -676,6 +702,81 @@ ul {
         bottom: 0;
         left: 0;
     }
+    /* ------------------------------------------ */
+
+    /* aside */
+    section aside {
+        display: block;
+        position: absolute;
+        bottom: 2.4rem;
+        right: 2.4rem;
+        z-index: 10;
+    }
+    section aside button {
+        display: block;
+        width: 5rem;
+        height: 5rem;
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 0.1rem solid rgba(196, 196, 196, 0.8);
+        border-radius: 100%;
+        position: relative;
+        position: absolute;
+        bottom: 2.4rem;
+        right: 2.4rem;
+
+        z-index: 10;
+    }
+
+    section aside button::after {
+        content: "";
+        width: 1.5rem;
+        height: 1.5rem;
+        border: 4px solid rgba(196, 196, 196, 0.8);
+        border-bottom: transparent;
+        border-right: transparent;
+        box-sizing: border-box;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -25%) rotate(45deg);
+    }
+
+    /* aside hover */
+    section aside button:hover {
+        border: 0.1rem solid rgba(196, 196, 196, 1);
+    }
+    section aside button:hover::after {
+        border: 4px solid rgba(118, 118, 118, 1);
+        border-bottom: transparent;
+        border-right: transparent;
+        box-sizing: border-box;
+    }
+    /* ------------------------------------------ */
+
+    /* modal창 */
+    .subscribe-modal {
+        width: 60rem;
+        height: 40rem;
+        background: url("./../images/pc-bg.png") no-repeat top center / contain;
+        padding: 19.6rem 0 4rem;
+
+        /* display: block; */
+    }
+
+    .subscribe-modal::after {
+        width: 11rem;
+        height: 11.2rem;
+        top: 6rem;
+    }
+
+    .subscribe-modal h4 {
+        font-size: 3.6rem;
+    }
+    .subscribe-modal p {
+        margin: 1.2rem 10.8rem 3.8rem;
+    }
+
+    /* ------------------------------------------ */
 
     /* footer */
     footer ul:last-child {
