@@ -49,8 +49,12 @@ strong {
 /* head */
 header {
     width: 100%;
-    height: 100%;
+    height: 7.6rem;
     background-color: var(--bg-color);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 9999;
 }
 header .head {
     padding: 2rem 2.4rem;
@@ -208,6 +212,10 @@ main {
     font-size: 1.4rem;
     line-height: 130%;
     margin: 3rem auto;
+}
+
+.page-info p span {
+    display: inline;
 }
 
 /* --------------------------------------- */
@@ -465,9 +473,76 @@ ul {
     color: rgba(118, 118, 118, 1);
 }
 
-@media screen and (min-width: 601px) and (max-width: 1079px) {
+@media (min-width: 601px) {
+    /* 공동속성 */
+    .btn {
+        font-size: 1.6rem;
+        padding: 1.5rem 3rem;
+    }
+
+    /* main */
     .page-info h2 {
-        font-size: 4.8rem;
+        font-size: 4.2rem;
+    }
+
+    .page-info p {
+        font-size: 1.6rem;
+    }
+
+    .page-info p span {
+        display: block;
+    }
+
+    /* section */
+
+    /* cat-info */
+    .cat-info .cat-info-txt {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 5%;
+        margin-top: 4rem;
+    }
+    .cat-info .cat-info-txt h3 {
+        font-size: 3.6rem;
+        margin-top: 0;
+        flex-basis: 60%;
+    }
+    .cat-info .cat-info-txt p {
+        flex-basis: 40%;
+        margin-top: 0;
+    }
+
+    /* cat-contents */
+    .cat-contents h3 {
+        font-size: 4.2rem;
+    }
+
+    .cat-contents-bottom-txt {
+        width: 100%;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .cat-contents-bottom-txt p {
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    .cat-contents-bottom-txt a {
+        flex-shrink: 0;
+    }
+
+    /* cat-subscribe */
+
+    .cat-subscribe fieldset {
+        font-size: 3.6rem;
+    }
+
+    .cat-subscribe fieldset span {
+        display: inline-block;
     }
 }
 
@@ -481,11 +556,12 @@ ul {
     /* header */
     header {
         padding: 0 6rem;
+        height: 10.2rem;
     }
 
     header .head {
         max-width: 128rem;
-        padding: 3.1rem 0;
+        height: 100%;
         margin: 0 auto;
     }
 
