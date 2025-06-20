@@ -291,7 +291,9 @@ section {
     object-fit: cover;
     display: block;
 }
-
+.cat-contents-bottom-txt {
+    overflow: hidden;
+}
 .cat-contents-bottom-txt p {
     text-align: left;
     margin-bottom: 3rem;
@@ -635,6 +637,10 @@ ul {
     .cat-contents-bottom-txt p {
         text-align: left;
         margin-bottom: 0;
+    }
+
+    .cat-contents-bottom-txt a {
+        flex-shrink: 0;
     }
 
     /* cat-subscribe */
