@@ -40,17 +40,18 @@ strong {
 /* --------------------------------------- */
 
 /* head */
-
 header {
     width: 100%;
     height: 100%;
+    background-color: var(--bg-color);
+}
+header .head {
     padding: 2rem 2.4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
     color: #fff;
-    background-color: var(--bg-color);
 }
 
 header h1 a {
@@ -154,7 +155,7 @@ header h1 img {
     font-size: 1.6rem;
 }
 
-.global-menu ul li:not(:last-child) {
+.global-menu ul li:not(:last-child, :nth-child(3)) {
     margin-bottom: 3rem;
 }
 
@@ -166,15 +167,19 @@ header h1 img {
 /* --------------------------------------- */
 
 /* main */
+main {
+    background-color: var(--bg-color);
+}
+
 .page-info {
     width: 100%;
     text-align: center;
     padding: 4rem 0 39rem;
-    background-color: var(--bg-color);
+
     position: relative;
 }
 
-.page-info::after {
+.page-info::before {
     content: "";
     width: 100%;
     height: 100%;
@@ -251,11 +256,16 @@ section {
     font-weight: 700;
     line-height: 130%;
     color: var(--main-color);
+    letter-spacing: -0.03rem;
+}
+.cat-contents h3 span {
+    display: block;
 }
 
 .cat-contents p {
     font-size: 1.6rem;
     line-height: 130%;
+    letter-spacing: -0.03rem;
 }
 .cat-contents p:nth-child(2) {
     margin-top: 3rem;
@@ -269,25 +279,32 @@ section {
     margin: 4rem 0 6rem;
     /* width: calc((26rem * 3)+ (2rem * 2)); */
     width: 82rem;
-    height: 26rem;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     gap: 2rem;
     position: relative;
 }
 
-.cat-img-box img {
+.cat-img-box li {
     width: 26rem;
     border-radius: 1.8rem;
     box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
+    overflow: hidden;
 }
 
-.cat-contents p:nth-child(4) {
+.cat-img-box li img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cat-contents-bottom-txt p {
     text-align: left;
     margin-bottom: 3rem;
 }
 
-.cat-contents a.btn {
+.cat-contents-bottom-txt a.btn {
     display: inline-block;
     float: right;
 }
@@ -433,4 +450,219 @@ ul {
     gap: 1.6rem;
     font-size: 1.4rem;
     color: rgba(118, 118, 118, 1);
+}
+
+@media (min-width: 769px) {
+    /* 공동속성 */
+    .btn {
+        font-size: 1.6rem;
+        padding: 1.5rem 3rem;
+    }
+
+    /* header */
+    header {
+        padding: 0 6rem;
+    }
+
+    header .head {
+        max-width: 128rem;
+        padding: 3.1rem 0;
+        margin: 0 auto;
+    }
+
+    header h1 a {
+        width: 13rem;
+    }
+
+    /* .hamburger-btn */
+    .hamburger-btn,
+    .arrow-btn {
+        display: none;
+    }
+
+    /* 네비게이션 바 */
+    .global-menu {
+        display: block;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        position: static;
+        padding: 0;
+    }
+
+    .global-menu ul {
+        margin-top: 0;
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+        justify-content: flex-end;
+        align-items: center;
+        color: #000;
+    }
+    .global-menu ul li:not(:last-child, :nth-child(3)) {
+        margin-bottom: 0;
+    }
+    .global-menu .download-btn {
+        margin: 0;
+    }
+
+    /* --------------------------------------- */
+
+    /* main */
+    main {
+        padding: 0 6rem;
+    }
+
+    .page-info {
+        max-width: 128rem;
+        margin: 0 auto;
+        text-align: left;
+        padding: 20rem 0 26.2rem;
+    }
+
+    .page-info::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: url("./../images/img_cat_png.png") no-repeat bottom right /
+            auto 95%;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .page-info h2 {
+        width: 60%;
+        font-size: 4.8rem;
+    }
+    .page-info h2 span {
+        display: inline-block;
+    }
+    .page-info p {
+        width: 30%;
+        margin-left: 0;
+    }
+
+    /* --------------------------------------- */
+
+    /* section */
+    section {
+        width: 100%;
+        padding: 0 6rem 24.6rem;
+    }
+    .cat-container {
+        max-width: 128rem;
+        margin: 0 auto;
+    }
+    /* cat-info */
+    .cat-info {
+        display: flex;
+        gap: 8%;
+        padding: 8rem 0 12rem;
+    }
+    .cat-info img {
+        width: 50%;
+        max-width: 66rem;
+        flex-basis: 50%;
+        border-radius: 3rem;
+    }
+    .cat-info .cat-info-txt {
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .cat-info h3 {
+        font-size: 3.6rem;
+        margin-top: 0;
+    }
+    .cat-info p {
+        font-size: 1.6rem;
+        margin-top: 3rem;
+    }
+
+    /* cat-contents */
+    .cat-contents {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 9rem;
+    }
+    .cat-contents h3 {
+        font-size: 4.8rem;
+        margin-bottom: 4rem;
+    }
+    .cat-contents h3 span {
+        display: inline-block;
+    }
+    .cat-contents p:nth-child(2) {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .cat-contents p:nth-child(2) span {
+        display: block;
+    }
+
+    .cat-img-box {
+        margin: 9rem 0;
+        width: 100%;
+        gap: 7.2rem;
+    }
+
+    .cat-img-box li {
+        width: 37.8rem;
+    }
+
+    .cat-contents-bottom-txt {
+        width: 80%;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .cat-contents-bottom-txt p {
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    /* cat-subscribe */
+    .cat-subscribe form {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 5rem 6rem;
+        border-radius: 3rem;
+        gap: 10%;
+    }
+    .cat-subscribe fieldset span {
+        display: inline-block;
+    }
+
+    .subscribe-txt {
+        flex-basis: 45%;
+    }
+    .email-send {
+        flex-basis: 45%;
+        width: 100%;
+        height: 6rem;
+        position: relative;
+        border: 1px solid red;
+    }
+    .email-send input {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateY(-50%);
+    }
+    .email-send button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }

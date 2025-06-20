@@ -20,108 +20,140 @@
     </head>
     <body>
         <header>
-            <h1 class="main-logo">
-                <a href="index.html"
-                    ><img src="./images/Logo-fin.svg" alt="HODU"
-                /></a>
-            </h1>
-            <button class="hamburger-btn">
-                <span></span>
-            </button>
-            <button class="arrow-btn">
-                <span></span>
-            </button>
-            <nav class="global-menu">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Support</li>
-                </ul>
-                <button type="button" class="btn download-btn">Download</button>
-            </nav>
+            <div class="head">
+                <h1 class="main-logo">
+                    <a href="index.html"
+                        ><img src="./images/Logo-fin.svg" alt="HODU"
+                    /></a>
+                </h1>
+                <button class="hamburger-btn">
+                    <span></span>
+                </button>
+                <button class="arrow-btn">
+                    <span></span>
+                </button>
+                <nav class="global-menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li>
+                            <button type="button" class="btn download-btn">
+                                Download
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </header>
-        <main class="page-info">
-            <h2>
-                Lorem Ipsum is simply<span>dummy text</span>of the printing and
-            </h2>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown
-            </p>
-            <button type="button" class="btn">Download</button>
-        </main>
-        <section>
-            <h2 class="sr-only">고양이 소개 콘텐츠</h2>
-            <article class="cat-info">
-                <img src="./images/img_4.png" alt="고양이 대표 사진" />
-                <h3>
-                    Lorem Ipsum is simply
-                    <span>dummy text of the printing</span> and dummy text
-                </h3>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
-                </p>
-            </article>
-
-            <article class="cat-contents clearfix">
-                <h3>dummy text of the printing and dummy</h3>
-                <p>
-                    Lorem Ipsum is simply <strong>dummy text</strong> of the
-                    printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an
-                    unknown
-                </p>
-
-                <div class="cat-img-box">
-                    <img src="./images/img_1.png" alt="고양이 사진 1" />
-                    <img src="./images/img_2.png" alt="고양이 사진 2" />
-                    <img src="./images/img_3.png" alt="고양이 사진 3" />
-                </div>
-
+        <main>
+            <div class="page-info">
+                <h2>
+                    Lorem Ipsum is simply<span>dummy text</span>of the printing
+                    and
+                </h2>
                 <p>
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's
                     standard dummy text ever since the 1500s, when an unknown
-                    Ipsum is simply dummy text of the printing and typesetting
-                    industry.
                 </p>
-
-                <a href="#" class="btn">Learn More</a>
-            </article>
-
-            <article class="cat-subscribe">
-                <form action="#" method="post" class="clearfix">
-                    <fieldset><span>Subscribe to our</span> Blog post</fieldset>
-
-                    <label for="user-email">
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text
-                    </label>
-                    <input
-                        type="email"
-                        name="user-email"
-                        id="user-email"
-                        placeholder="Enter your e-mail address"
-                    />
-
-                    <button type="submit" class="btn">Subscribe</button>
-
-                    <div class="subscribe-modal">
-                        <h4>Thank you!</h4>
+                <button type="button" class="btn">Download</button>
+            </div>
+        </main>
+        <section>
+            <div class="cat-container">
+                <h2 class="sr-only">고양이 소개 콘텐츠</h2>
+                <article class="cat-info">
+                    <img src="./images/img_4.png" alt="고양이 대표 사진" />
+                    <div class="cat-info-txt">
+                        <h3>
+                            Lorem Ipsum is simply
+                            <span>dummy text of the printing</span> and dummy
+                            text
+                        </h3>
                         <p>
-                            Lorem Ipsum is simply dummy text of the printing
-                            industry.
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry.
                         </p>
-                        <button type="button" class="btn modal-btn">
-                            OK! I Love HODU
-                        </button>
                     </div>
-                </form>
-            </article>
-            <div class="bottom-img"></div>
+                </article>
+
+                <article class="cat-contents clearfix">
+                    <h3><span>dummy text of the printing</span> and dummy</h3>
+                    <p>
+                        <span
+                            >Lorem Ipsum is simply
+                            <strong>dummy text</strong> of the printing and
+                            typesetting industry.</span
+                        >
+                        Lorem Ipsum has been the industry's standard dummy text
+                        ever since the 1500s, when an unknown
+                    </p>
+
+                    <ul class="cat-img-box">
+                        <li>
+                            <img src="./images/img_1.png" alt="고양이 사진 1" />
+                        </li>
+                        <li>
+                            <img src="./images/img_2.png" alt="고양이 사진 2" />
+                        </li>
+                        <li>
+                            <img src="./images/img_3.png" alt="고양이 사진 3" />
+                        </li>
+                    </ul>
+
+                    <div class="cat-contents-bottom-txt clearfix">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry.<br />
+                            Lorem Ipsum has been the industry's standard dummy
+                            text ever since the 1500s, when an unknown<br />
+                            Ipsum is simply dummy text of the printing and
+                            typesetting industry.
+                        </p>
+
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </article>
+
+                <article class="cat-subscribe">
+                    <form action="#" method="post" class="clearfix">
+                        <div class="subscribe-txt">
+                            <fieldset>
+                                <span>Subscribe to our</span> Blog post
+                            </fieldset>
+
+                            <label for="user-email">
+                                Lorem Ipsum is simply dummy text of the printing
+                                and typesetting industry. Lorem Ipsum has been
+                                the industry's standard dummy text
+                            </label>
+                        </div>
+                        <div class="email-send">
+                            <input
+                                type="email"
+                                name="user-email"
+                                id="user-email"
+                                placeholder="Enter your e-mail address"
+                            />
+
+                            <button type="submit" class="btn">Subscribe</button>
+                        </div>
+
+                        <div class="subscribe-modal">
+                            <h4>Thank you!</h4>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing
+                                industry.
+                            </p>
+                            <button type="button" class="btn modal-btn">
+                                OK! I Love HODU
+                            </button>
+                        </div>
+                    </form>
+                </article>
+                <div class="bottom-img"></div>
+            </div>
         </section>
         <footer>
             <ul class="footer-tit">
