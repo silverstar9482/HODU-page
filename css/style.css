@@ -547,6 +547,9 @@ ul {
         width: 60%;
         font-size: 4.8rem;
     }
+    .page-info h2 span {
+        display: inline-block;
+    }
 
     .page-info p {
         width: 30%;

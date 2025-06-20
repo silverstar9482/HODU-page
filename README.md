@@ -52,7 +52,7 @@
 
 ### 🖥️ PC
 
-<!-- <img src="./image/1000-hour-PC.png" alt="PC 화면 스크린샷" width="600"> -->
+<img src="./images/PC-page.png" alt="PC 화면 스크린샷" width="600">
 
 ### 📱 Mobile
 
